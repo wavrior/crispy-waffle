@@ -45,7 +45,7 @@ pre.code .c{color:var(--grey)}
     <div class="facts">
       <div><span class="mono">Role</span><span class="val">GFX rebuild &amp; toolkit design</span></div>
       <!-- EDIT: Fill in episode count -->
-      <div><span class="mono">Scope</span><span class="val">[X] episodes · 2D + 3D</span></div>
+      <div><span class="mono">Scope</span><span class="val">8 episodes · 2D + 3D</span></div>
       <div><span class="mono">Language</span><span class="val">French</span></div>
       <div><span class="mono">Source files</span><span class="val">None</span></div>
     </div>
@@ -58,19 +58,35 @@ pre.code .c{color:var(--grey)}
 
   <section>
     <h2>Accuracy of reconstruction</h2>
-    <p>Each graphic was rebuilt without access to project files, using broadcast reference frames as the sole guide for typography, colour, lighting and motion timing. The comparisons below show the French localised version alongside the English original at the same point in the sequence.</p>
+    <p>Each graphic was rebuilt without access to project files, using broadcast reference frames as the sole guide for typography, colour, lighting and motion timing. The comparisons below show the English original (left) alongside the rebuilt French localisation (right).</p>
     <!-- NOTE: Confirm with Woody that showing the English originals alongside is cleared before publishing -->
-    <figure class="compare">
-      <img src="img/compare-level-name.png" alt="French MISE À FEU level card alongside English BLAST OFF original">
-      <figcaption>Level name card - badge geometry, lighting and typography matched from broadcast reference.</figcaption>
+    <figure class="compare orig-left">
+      <img src="img/hvh-compare-logo-orange.jpg" alt="Human vs Hamster main title logo EN original alongside rebuilt French version">
+      <figcaption>Main title logo - reconstructed from broadcast reference as a 3D asset, localised to the French wordmark.</figcaption>
     </figure>
-    <figure class="compare">
-      <img src="img/compare-board.png" alt="French contestant board alongside English original">
-      <figcaption>Contestant board - ten individually named, lit 3D name plates, rebuilt and localised.</figcaption>
+    <figure class="compare orig-left">
+      <img src="img/hvh-compare-logo-presenters.jpg" alt="Human vs Hamster logo with presenters EN alongside French rebuilt version">
+      <figcaption>Logo with presenters - the rebuilt 3D wordmark integrated into the show opener sequence.</figcaption>
     </figure>
-    <figure class="compare">
-      <img src="img/compare-mascot.png" alt="French Astro mascot lower third alongside English original">
-      <figcaption>Mascot lower third - badge, flag logo and 3D character composite, reconstructed to match the original.</figcaption>
+    <figure class="compare orig-left">
+      <img src="img/hvh-compare-logo-blue.jpg" alt="Human vs Hamster blue lightning logo bump EN alongside French version">
+      <figcaption>Logo bump on blue lightning background - colour, geometry and animation matched from reference.</figcaption>
+    </figure>
+    <figure class="compare orig-left">
+      <img src="img/hvh-compare-scoreboard.jpg" alt="Trivia Kings scoreboard EN alongside Les Rois du Quiz French version">
+      <figcaption>Scoreboard graphic - team names, logo integration and scoring panel all localised.</figcaption>
+    </figure>
+    <figure class="compare orig-left">
+      <img src="img/hvh-compare-cards.jpg" alt="Playing card sequence EN alongside French localised version with character badges">
+      <figcaption>Playing card sequence - hamster character cards rebuilt with localised name badges throughout.</figcaption>
+    </figure>
+    <figure class="compare orig-left">
+      <img src="img/hvh-compare-hamster-board.jpg" alt="Full hamster contestant board EN alongside French version">
+      <figcaption>Contestant name board - ten individual badges rebuilt and localised across the full cast.</figcaption>
+    </figure>
+    <figure class="compare orig-left">
+      <img src="img/hvh-compare-mascot-name.jpg" alt="Romeo mascot with name badge EN alongside French version">
+      <figcaption>Individual mascot name badge - badge geometry, star rating and typography matched from broadcast reference.</figcaption>
     </figure>
   </section>
 
@@ -82,7 +98,6 @@ pre.code .c{color:var(--grey)}
       <figcaption>The French logotype rebuilt from broadcast reference as editable vector - the master artwork used across every graphic in the package.</figcaption>
     </figure>
     <p>A 3D version of the title was additionally rebuilt in Cinema 4D to match the original's dimensional logo animations and transition elements.</p>
-   
   </section>
 
   <section>
@@ -158,7 +173,7 @@ min = Math.floor(slider / 60);
 function addZero(n){ return (n &lt; 10) ? "0"+n : n; }
 slider &gt; 0 ? addZero(min)+":"+addZero(sec) : "00:00"</pre>
     <figure>
-      <img src="img/clock.png" alt="Broadcast frame showing the expression-driven clock at 00:39 during the Les Gueules de Monstres challenge">
+      <img src="img/hvh-clock.jpg" alt="Broadcast frame showing the expression-driven clock at 00:39 during the Les Gueules de Monstres challenge">
       <figcaption>The clock in broadcast - displaying 00:39 during the Les Gueules de Monstres challenge. The value advances automatically from a single start input; no keyframes are used.</figcaption>
     </figure>
     <p>The same expression approach is used throughout the rig set - editable text layers drive the visible graphic via <span style="font-family:var(--mono);font-size:.85em">sourceText</span> links, and opacity transitions are controlled by the Frames In and Frames Out sliders rather than manual keyframing.</p>
@@ -187,7 +202,7 @@ slider &gt; 0 ? addZero(min)+":"+addZero(sec) : "00:00"</pre>
   <section>
     <h2>Credit</h2>
     <!-- EDIT: Add the original studio/network credit if you know it -->
-    <p class="credit">Original package design: WBD Discovery<br>My role: full GFX recreation, Illustrator logo rebuild, Cinema 4D title rebuild and localisation toolkit at Warner Bros. Discovery.</p>
+    <p class="credit">Original package design: [original broadcaster's design team].<br>My role: full GFX recreation, Illustrator logo rebuild, Cinema 4D title rebuild and localisation toolkit at Warner Bros. Discovery.</p>
   </section>
 
   <div class="next">
