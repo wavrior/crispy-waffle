@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Human vs Hamster — GFX Rebuild & Toolkit · Alex Kielesinska</title>
-<meta name="description" content="Rebuilding the entire Human vs Hamster graphics package from scratch — 2D, 3D, logo artwork — then structuring it as an automation-ready Essential Properties toolkit for French localisation.">
+<title>Human vs Hamster - GFX Rebuild & Toolkit · Alex Kielesinska</title>
+<meta name="description" content="Rebuilding the entire Human vs Hamster graphics package from scratch - 2D, 3D, logo artwork - then structuring it as an automation-ready Essential Properties toolkit for French localisation.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;600;700&family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -13,22 +13,22 @@
 /* Toolkit diagram */
 .diagram{border:1px solid var(--line);background:var(--ink-2);padding:26px;margin:28px 0 8px}
 .tier{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin:10px 0}
-.tier .lbl{font-family:var(--mono);font-size:.64rem;letter-spacing:.1em;text-transform:uppercase;color:var(--cyan);width:120px;flex:none}
-.chip{font-family:var(--mono);font-size:.7rem;letter-spacing:.04em;border:1px solid var(--line);background:var(--ink);padding:6px 10px;color:var(--bone)}
-.chip.esp{border-color:var(--amber);color:var(--amber)}
-.arrow{text-align:center;color:var(--grey);font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;margin:6px 0}
+.tier .lbl{font-family:var(--mono);font-size:.64rem;letter-spacing:.1em;text-transform:uppercase;colour:var(--cyan);width:120px;flex:none}
+.chip{font-family:var(--mono);font-size:.7rem;letter-spacing:.04em;border:1px solid var(--line);background:var(--ink);padding:6px 10px;colour:var(--bone)}
+.chip.esp{border-color:var(--amber);colour:var(--amber)}
+.arrow{text-align:center;colour:var(--grey);font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;margin:6px 0}
 /* Scale stats */
 .specs{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--line);margin:28px 0 8px}
 .specs div{padding:14px 16px;border-right:1px solid var(--line)}
 .specs div:last-child{border-right:0}
-.specs .mono{color:var(--cyan);display:block;margin-bottom:6px}
+.specs .mono{colour:var(--cyan);display:block;margin-bottom:6px}
 .specs .big{font-family:var(--disp);font-size:1.7rem;font-weight:600;line-height:1}
 /* Expression code */
-pre.code{background:var(--ink-2);border:1px solid var(--line);border-left:2px solid var(--amber);padding:18px 20px;overflow-x:auto;font-family:var(--mono);font-size:.78rem;line-height:1.6;color:var(--bone);margin:20px 0 8px}
-pre.code .c{color:var(--grey)}
+pre.code{background:var(--ink-2);border:1px solid var(--line);border-left:2px solid var(--amber);padding:18px 20px;overflow-x:auto;font-family:var(--mono);font-size:.78rem;line-height:1.6;colour:var(--bone);margin:20px 0 8px}
+pre.code .c{colour:var(--grey)}
 /* Callout */
 .callout{border-left:2px solid var(--amber);padding:14px 20px;margin:20px 0;background:var(--ink-2)}
-.callout p{color:var(--bone);margin:0;font-size:.95rem}
+.callout p{colour:var(--bone);margin:0;font-size:.95rem}
 @media(max-width:700px){.specs{grid-template-columns:1fr 1fr}.specs div:nth-child(2){border-right:0}.specs div:nth-child(-n+2){border-bottom:1px solid var(--line)}.tier .lbl{width:100%}}
 </style>
 </head>
@@ -45,13 +45,13 @@ pre.code .c{color:var(--grey)}
 
   <div class="case-hero">
     <!-- EDIT: Confirm the year -->
-    <p class="mono kicker">Warner Bros. Discovery · Localisation · 2024</p>
+    <p class="mono kicker">Warner Bros. Discovery · Localisation · [YEAR]</p>
     <h1>Human vs Hamster -<br>GFX Rebuild &amp; Toolkit</h1>
     <p class="mono meta">GFX recreation · Illustrator logo rebuild · Cinema 4D · Essential Properties · Automation-ready · No source files supplied</p>
     <div class="facts">
       <div><span class="mono">Role</span><span class="val">GFX rebuild &amp; toolkit design</span></div>
       <!-- EDIT: Fill in episode count -->
-      <div><span class="mono">Scope</span><span class="val">8 episodes · 2D + 3D</span></div>
+      <div><span class="mono">Scope</span><span class="val">[X] episodes · 2D + 3D</span></div>
       <div><span class="mono">Language</span><span class="val">French</span></div>
       <div><span class="mono">Source files</span><span class="val">None</span></div>
     </div>
@@ -62,17 +62,17 @@ pre.code .c{color:var(--grey)}
     <h2>Overview</h2>
     <p class="pull">Localising a series is straightforward when you have the project files. We didn't have any.</p>
     <!-- EDIT: Rewrite in your own voice if needed -->
-    <p>To deliver the French version of Human vs Hamster, I rebuilt the show's entire graphics package - 2D, 3D, and the logo artwork itself — from scratch, using only the English broadcast masters as reference. No project files, no original assets, no typefaces supplied. Every element was reconstructed by eye, then structured as an automation-ready Essential Properties toolkit so that localising each new episode became a versioning job, not a rebuild.</p>
+    <p>To deliver the French version of Human vs Hamster, I rebuilt the show's entire graphics package - 2D, 3D, and the logo artwork itself - from scratch, using only the English broadcast masters as reference. No project files, no original assets, no typefaces supplied. Every element was reconstructed by eye, then structured as an <strong>automation-ready Essential Properties toolkit</strong> so that localising each new episode became a versioning job, not a rebuild.</p>
   </section>
 
   <!-- ── REBUILD IN FRAMES ─────────────────────────────────────────────────── -->
   <section>
     <h2>The rebuild in frames</h2>
-    <p>Every graphic below was rebuilt with no project files - matching typography, colour, lighting and timing from broadcast english reference.</p>
+    <p>The test of a from-scratch reconstruction is simple: cut it against the original and see if anyone can tell. Every graphic below was rebuilt with no project files - matching typography, colour, lighting and timing from broadcast reference alone.</p>
     <!-- NOTE: Confirm with Woody that showing the English originals alongside is cleared before publishing -->
     <figure class="compare">
       <img src="img/compare-level-name.png" alt="French MISE À FEU level card versus English BLAST OFF original">
-      <figcaption>Level name card - badge construction, lighting and type matched from a reference frame.</figcaption>
+      <figcaption>Level name card - badge construction, lighting and type matched from a single reference frame.</figcaption>
     </figure>
     <figure class="compare">
       <img src="img/compare-board.png" alt="French contestant board versus English original">
@@ -87,20 +87,20 @@ pre.code .c{color:var(--grey)}
   <!-- ── LOGO REBUILD ──────────────────────────────────────────────────────── -->
   <section>
     <h2>Down to the logo itself</h2>
-    <p>With no source artwork, even the show logo had to be rebuilt. Working from a broadcast screengrab, I reconstructed the <strong>Human vs Hamster</strong> wordmark from scratch as clean vector in Illustrator - letterform, bevel, outline and colour band redrawn - then localised it to the French <strong>Humain vs Hamster</strong>. That vector became the master logo used across every graphic in the package: bumps, transitions, lower thirds and boards.</p>
+    <p>With no source artwork, even the show logo had to be rebuilt. Working from a single broadcast screengrab, I reconstructed the <strong>Human vs Hamster</strong> wordmark from scratch as clean vector in Illustrator - every letterform, bevel, outline and colour band redrawn - then localised it to the French <strong>Humain vs Hamster</strong>. That vector became the master logo used across every graphic in the package: bumps, transitions, lower thirds and boards.</p>
     <figure>
       <img src="img/logo-rebuild-ai.png" alt="Humain vs Hamster logo rebuilt as editable vector in Illustrator">
       <figcaption>The French wordmark rebuilt from a screengrab as editable vector - the master logo feeding every graphic in the package.</figcaption>
     </figure>
     <p>A 3D version of the title was also rebuilt in Cinema 4D to match the original's dimensional logo bumps and transitions.</p>
-   <!-- <figure>
-      <!-- NOTE: Add C4D screenshot here when you're back at that machine — replace this slot with <img src="img/hvh-c4d.png"> -->
-    <!-- <div class="photo-slot" style="aspect-ratio:16/9">
+    <figure>
+      <!-- NOTE: Add C4D screenshot here when you're back at that machine - replace this slot with <img src="img/hvh-c4d.png"> -->
+      <div class="photo-slot" style="aspect-ratio:16/9">
         <span class="slot-title">📷 C4D TITLE REBUILD</span>
         <span class="slot-hint">Cinema 4D viewport or rendered frame → save as img/hvh-c4d.png</span>
       </div>
-      <figcaption>3D title rebuild in Cinema 4D — to be added.</figcaption>
-    </figure> -->
+      <figcaption>3D title rebuild in Cinema 4D - to be added.</figcaption>
+    </figure>
   </section>
 
   <!-- ── HOW THE SYSTEM IS BUILT ───────────────────────────────────────────── -->
@@ -114,10 +114,10 @@ pre.code .c{color:var(--grey)}
       <div class="arrow">▼ surfaced through ▼</div>
       <div class="tier"><span class="lbl">EGP controls →</span><span class="chip">Text</span><span class="chip">Text Colour</span><span class="chip">Colour 1 / 2 / 3</span><span class="chip">Fill Colour</span><span class="chip">Animate In/Out</span><span class="chip">Frames In/Out</span></div>
     </div>
-    <p style="font-family:var(--mono);font-size:.7rem;color:var(--grey);margin-top:10px">Six exposed rigs — the L3D name-strap exists as a 1-line, 2-line and blue team variant sharing one design language. Real comp and control names from the project.</p>
+    <p style="font-family:var(--mono);font-size:.7rem;colour:var(--grey);margin-top:10px">Six exposed rigs - the L3D name-strap exists as a 1-line, 2-line and blue team variant sharing one design language. Real comp and control names from the project.</p>
     <figure>
-      <img src="img/project-structure.png" alt="After Effects project panel showing the Templates and ESP rig folder structure">
-      <figcaption>The library an editor works from — Templates grouped by type, each wrapping one of the ESP rigs. Real project structure.</figcaption>
+      <img src="img/hvh-gfx-elements.png" alt="After Effects GFX Elements panel showing the full template library">
+      <figcaption>The full template library - GFX Elements organised by type: Cards, Dubcard, Thirds, Title and Vis, each wrapping a shared ESP rig.</figcaption>
     </figure>
   </section>
 
@@ -125,7 +125,7 @@ pre.code .c{color:var(--grey)}
   <section>
     <h2>Built for batch automation</h2>
     <p>Because every editable field is a named text layer, the toolkit plugs straight into the studio's batch-automation script. A translation list is matched to the timeline by timecode, and the script generates a full set of populated graphics comps in one pass - dropping each translation into the right rig automatically. What would be hundreds of manual graphic edits per episode becomes a <strong>populate-and-proof</strong> job.</p>
-    <p>Crucially, the rigs still work entirely by hand. If the automation isn't run - or an editor wants to tweak one card — they type straight into the Essential Graphics panel. The automation is an accelerator, never a dependency.</p>
+    <p>Crucially, the rigs still work entirely by hand. If the automation isn't run - or an editor wants to tweak one card - they type straight into the Essential Graphics panel. The automation is an accelerator, never a dependency.</p>
     <div class="fig-grid">
       <figure>
         <img src="img/generated-comps.png" alt="Project panel showing a full season and episode folder of automatically generated graphics comps">
@@ -141,57 +141,61 @@ pre.code .c{color:var(--grey)}
   <!-- ── TIMING CONVENTION ──────────────────────────────────────────────────── -->
   <section>
     <h2>One timing convention, everywhere</h2>
-    <p>Every animated template carries the same four-control rig — <strong>Animate In</strong> and <strong>Animate Out</strong> checkboxes plus <strong>Frames In</strong> and <strong>Frames Out</strong> sliders. An editor sets timing the same way on every graphic in the package and never touches a keyframe. The heavier rigs go further: <strong>ESP_Vis_Board Name</strong> exposes the upper text, main text, text colour and a multi-step colour-menu system — one build serving many on-screen states.</p>
+    <p>Every animated template carries the same four-control rig - <strong>Animate In</strong> and <strong>Animate Out</strong> checkboxes plus <strong>Frames In</strong> and <strong>Frames Out</strong> sliders. An editor sets timing the same way on every graphic in the package and never touches a keyframe. The heavier rigs go further: <strong>ESP_Vis_Board Name</strong> exposes the upper text, main text, text colour and a multi-step colour-menu system - one build serving many on-screen states.</p>
     <figure>
       <img src="img/egp-colour-controls.png" alt="Essential Graphics panel showing exposed controls alongside the rendered board">
-      <figcaption>The toolkit in use — exposed controls in the Essential Graphics panel, the rig library in the project tree, and the rendered board.</figcaption>
+      <figcaption>The toolkit in use - exposed controls in the Essential Graphics panel, the rig library in the project tree, and the rendered board.</figcaption>
     </figure>
   </section>
 
   <!-- ── COLOUR SYSTEM ──────────────────────────────────────────────────────── -->
   <section>
-    <h2>One rig, many looks — the colour system</h2>
-    <p>The two richest rigs don't hard-code their colours. <strong>ESP_Vis_Board Name</strong> and <strong>ESP_Vis_Level Name</strong> run stacked colour-menu controls (Colour 1, 2, 3 — sometimes 4) feeding Fill effects, so a single build switches between the show's blue, gold, purple, pink and green states from a dropdown rather than a re-edit. One rig covers what would otherwise be a dozen separate graphics.</p>
+    <h2>One rig, many looks - the colour system</h2>
+    <p>The two richest rigs don't hard-code their colours. <strong>ESP_Vis_Board Name</strong> and <strong>ESP_Vis_Level Name</strong> run stacked colour-menu controls (Colour 1, 2, 3 - sometimes 4) feeding Fill effects, so a single build switches between the show's blue, gold, purple, pink and green states from a dropdown rather than a re-edit. One rig covers what would otherwise be a dozen separate graphics.</p>
     <figure>
       <img src="img/hamster-board.png" alt="Ten contestant name boards in different colourways driven by the same rig">
-      <figcaption>Ten name boards, one rig — each instance is the same ESP_Vis_Board Name graphic with different text and a different colour-menu selection.</figcaption>
+      <figcaption>Ten name boards, one rig - each instance is the same ESP_Vis_Board Name graphic with different text and a different colour-menu selection.</figcaption>
     </figure>
   </section>
 
   <!-- ── 3D SCENES ──────────────────────────────────────────────────────────── -->
   <section>
-    <h2>Not flat — lit 3D scenes</h2>
-    <p>The "vis" rigs aren't 2D lower thirds. Rebuilt from reference, <strong>ESP_Vis_Board Name</strong> and <strong>ESP_Vis_Level Name</strong> are composed in 3D space — a camera, multiple ambient lights, a main canvas plane and shaped geometry — so the name boards sit and catch light like the originals. Matching that look without source files meant reconstructing the lighting and camera by eye, then wrapping the result in the same editor-safe controls as everything else.</p>
+    <h2>Not flat - lit 3D scenes</h2>
+    <p>The "vis" rigs aren't 2D lower thirds. Rebuilt from reference, <strong>ESP_Vis_Board Name</strong> and <strong>ESP_Vis_Level Name</strong> are composed in 3D space - a camera, multiple ambient lights, a main canvas plane and shaped geometry - so the name boards sit and catch light like the originals. Matching that look without source files meant reconstructing the lighting and camera by eye, then wrapping the result in the same editor-safe controls as everything else.</p>
     <figure>
       <img src="img/rig-3d-internals.png" alt="Inside an ESP rig showing the 3D top-view and colour-menu effect controls">
-      <figcaption>Under the hood — the top-view shows the board angled in 3D space with its lights and canvas; the effect controls show the stacked colour menus and Fills.</figcaption>
+      <figcaption>Under the hood - the top-view shows the board angled in 3D space with its lights and canvas; the effect controls show the stacked colour menus and Fills.</figcaption>
     </figure>
   </section>
 
   <!-- ── CLOCK & EXPRESSIONS ───────────────────────────────────────────────── -->
   <section>
-    <h2>The clever bit — a self-running clock</h2>
-    <p>The challenge clock isn't keyframed. A Slider Control sets the start time, an expression advances it one second per second of playback, and a second expression formats the result as mm:ss — so an editor just sets a number and the timer runs itself, correctly, every time.</p>
-<pre class="code"><span class="c">// offset on the Slider Control — advances with playback</span>
+    <h2>The clever bit - a self-running clock</h2>
+    <p>The challenge clock isn't keyframed. A Slider Control sets the start time, an expression advances it one second per second of playback, and a second expression formats the result as mm:ss - so an editor just sets a number and the timer runs itself, correctly, every time.</p>
+<pre class="code"><span class="c">// offset on the Slider Control - advances with playback</span>
 effect("Slider Control")("Slider") + Math.floor(time)
 
-<span class="c">// source text — formats the slider as mm:ss</span>
+<span class="c">// source text - formats the slider as mm:ss</span>
 slider = effect("Slider Control")("Slider");
 sec = slider % 60;
 min = Math.floor(slider / 60);
 function addZero(n){ return (n &lt; 10) ? "0"+n : n; }
 slider &gt; 0 ? addZero(min)+":"+addZero(sec) : "00:00"</pre>
-    <p>Expressions wire the rest of the rigs together too — editable text layers feed the visible graphic via <span style="font-family:var(--mono);font-size:.85em">sourceText</span> links, and fade timing is driven off the Frames In control, so the exposed inputs stay simple while the rig does the work underneath.</p>
+    <p>Expressions wire the rest of the rigs together too - editable text layers feed the visible graphic via <span style="font-family:var(--mono);font-size:.85em">sourceText</span> links, and fade timing is driven off the Frames In control, so the exposed inputs stay simple while the rig does the work underneath.</p>
+    <figure>
+      <img src="img/hvh-clock.jpg" alt="Broadcast frame showing the self-running clock displaying 00:39 during the Les Gueules de Monstres challenge">
+      <figcaption>The self-running timer in broadcast - the clock advances from a single start value, formatted and displayed automatically. No keyframes, no manual updates per episode.</figcaption>
+    </figure>
     <figure>
       <img src="img/level-name-expressions.png" alt="Level-name comp showing expressions linking editable layers to the visible graphic">
-      <figcaption>Expression wiring — the visible text reads from named layers via sourceText, and opacity fades off the Frames In slider.</figcaption>
+      <figcaption>Expression wiring - the visible text reads from named layers via sourceText, and opacity fades off the Frames In slider.</figcaption>
     </figure>
   </section>
 
   <!-- ── AT SCALE ───────────────────────────────────────────────────────────── -->
   <section>
     <h2>At scale</h2>
-    <p>The same toolkit drove the full episode end to end — from main title and pre-titles through contestant lower thirds, team names, challenge name cards, the stats vis overlays, the running clock and the closing dubcard. Built once, it absorbed a whole series' worth of localised copy through the same rigs.</p>
+    <p>The same toolkit drove the full episode end to end - from main title and pre-titles through contestant lower thirds, team names, challenge name cards, the stats vis overlays, the running clock and the closing dubcard. Built once, it absorbed a whole series' worth of localised copy through the same rigs.</p>
     <div class="specs">
       <div><span class="mono">Template comps</span><span class="big">20+</span></div>
       <div><span class="mono">Exposed rigs</span><span class="big">6</span></div>
@@ -203,7 +207,7 @@ slider &gt; 0 ? addZero(min)+":"+addZero(sec) : "00:00"</pre>
   <!-- ── WHY IT MATTERS ─────────────────────────────────────────────────────── -->
   <section>
     <h2>Why it matters</h2>
-    <p>Built this way, a new episode is a populate-and-proof job rather than a rebuild — and because the rigs are locked and editor-safe, anyone on the team can run it without breaking the brand. The same architecture that made a from-scratch localisation possible is what keeps it fast and consistent at series scale.</p>
+    <p>Built this way, a new episode is a populate-and-proof job rather than a rebuild - and because the rigs are locked and editor-safe, anyone on the team can run it without breaking the brand. The same architecture that made a from-scratch localisation possible is what keeps it fast and consistent at series scale.</p>
   </section>
 
   <!-- ── CREDIT ─────────────────────────────────────────────────────────────── -->
