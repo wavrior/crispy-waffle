@@ -10,34 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;600;700&family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="case.css">
 <style>
-.diagram{
-  border:1px solid rgba(160,200,240,0.45);
-  background:linear-gradient(135deg,#eef6ff 0%,#eaf3ff 20%,#f0eeff 45%,#eaf8f6 70%,#eef6ff 100%);
-  background-size:300% 300%;
-  animation:holo 10s ease infinite;
-  padding:26px;
-  margin:28px 0 8px;
-  position:relative;
-  overflow:hidden;
-}
-.diagram::before{
-  content:'';
-  position:absolute;
-  inset:0;
-  background:linear-gradient(105deg,transparent 25%,rgba(255,255,255,0.45) 50%,transparent 75%);
-  background-size:250% 100%;
-  animation:shimmer 5s ease-in-out infinite;
-  pointer-events:none;
-}
-@keyframes holo{
-  0%{background-position:0% 50%}
-  50%{background-position:100% 50%}
-  100%{background-position:0% 50%}
-}
-@keyframes shimmer{
-  0%{background-position:250% 0}
-  100%{background-position:-250% 0}
-}
+.diagram{border:1px solid var(--line);background:var(--ink-2);padding:26px;margin:28px 0 8px}
 .tier{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin:10px 0}
 .tier .lbl{font-family:var(--mono);font-size:.64rem;letter-spacing:.1em;text-transform:uppercase;color:var(--cyan);width:120px;flex:none}
 .chip{font-family:var(--mono);font-size:.7rem;letter-spacing:.04em;border:1px solid var(--line);background:var(--ink);padding:6px 10px;color:var(--bone)}
@@ -88,31 +61,31 @@ pre.code .c{color:var(--grey)}
     <p>Each graphic was rebuilt without access to project files, using broadcast reference frames as the sole guide for typography, colour, lighting and motion timing. The comparisons below show the English original (left) alongside the rebuilt French localisation (right).</p>
     <!-- NOTE: Confirm with Woody that showing the English originals alongside is cleared before publishing -->
     <figure class="compare orig-left">
-      <img src="img/hvh-compare-logo-orange.jpg" alt="Human vs Hamster main title logo EN original alongside rebuilt French version">
+      <img src="img/hvh-compare-logo-orange.png" alt="Human vs Hamster main title logo EN original alongside rebuilt French version">
       <figcaption>Main title logo - reconstructed from broadcast reference as a 3D asset, localised to the French wordmark.</figcaption>
     </figure>
     <figure class="compare orig-left">
-      <img src="img/hvh-compare-logo-presenters.jpg" alt="Human vs Hamster logo with presenters EN alongside French rebuilt version">
-      <figcaption>Logo with presenters - the rebuilt 3D wordmark integrated into the show opener sequence.</figcaption>
+      <img src="img/hvh-compare-logo-presenters.png" alt="Human vs Hamster logo transition EN alongside French rebuilt version">
+      <figcaption>Logo 3D transition - the rebuilt 3D wordmark integrated into the show opener sequence.</figcaption>
     </figure>
     <figure class="compare orig-left">
-      <img src="img/hvh-compare-logo-blue.jpg" alt="Human vs Hamster blue lightning logo bump EN alongside French version">
+      <img src="img/hvh-compare-logo-blue.png" alt="Human vs Hamster blue lightning logo bump EN alongside French version">
       <figcaption>Logo bump on blue lightning background - colour, geometry and animation matched from reference.</figcaption>
     </figure>
     <figure class="compare orig-left">
-      <img src="img/hvh-compare-scoreboard.jpg" alt="Trivia Kings scoreboard EN alongside Les Rois du Quiz French version">
+      <img src="img/hvh-compare-scoreboard.png" alt="Trivia Kings scoreboard EN alongside Les Rois du Quiz French version">
       <figcaption>Scoreboard graphic - team names, logo integration and scoring panel all localised.</figcaption>
     </figure>
     <figure class="compare orig-left">
-      <img src="img/hvh-compare-cards.jpg" alt="Playing card sequence EN alongside French localised version with character badges">
+      <img src="img/hvh-compare-cards.png" alt="Playing card sequence EN alongside French localised version with character badges">
       <figcaption>Playing card sequence - hamster character cards rebuilt with localised name badges throughout.</figcaption>
     </figure>
     <figure class="compare orig-left">
-      <img src="img/hvh-compare-hamster-board.jpg" alt="Full hamster contestant board EN alongside French version">
+      <img src="img/hvh-compare-hamster-board.png" alt="Full hamster contestant board EN alongside French version">
       <figcaption>Contestant name board - ten individual badges rebuilt and localised across the full cast.</figcaption>
     </figure>
     <figure class="compare orig-left">
-      <img src="img/hvh-compare-mascot-name.jpg" alt="Romeo mascot with name badge EN alongside French version">
+      <img src="img/hvh-compare-mascot-name.png" alt="Romeo mascot with name badge EN alongside French version">
       <figcaption>Individual mascot name badge - badge geometry, star rating and typography matched from broadcast reference.</figcaption>
     </figure>
   </section>
@@ -200,7 +173,7 @@ min = Math.floor(slider / 60);
 function addZero(n){ return (n &lt; 10) ? "0"+n : n; }
 slider &gt; 0 ? addZero(min)+":"+addZero(sec) : "00:00"</pre>
     <figure>
-      <img src="img/hvh-clock.jpg" alt="Broadcast frame showing the expression-driven clock at 00:39 during the Les Gueules de Monstres challenge">
+      <img src="img/clock.png" alt="Broadcast frame showing the expression-driven clock at 00:39 during the Les Gueules de Monstres challenge">
       <figcaption>The clock in broadcast - displaying 00:39 during the Les Gueules de Monstres challenge. The value advances automatically from a single start input; no keyframes are used.</figcaption>
     </figure>
     <p>The same expression approach is used throughout the rig set - editable text layers drive the visible graphic via <span style="font-family:var(--mono);font-size:.85em">sourceText</span> links, and opacity transitions are controlled by the Frames In and Frames Out sliders rather than manual keyframing.</p>
