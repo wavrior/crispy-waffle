@@ -10,14 +10,14 @@
 <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;600;700&family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root{
-  --ink:#E8DDB5;          /* pearl beige — page base */
-  --ink-2:#EFE7C9;        /* raised panels */
-  --line:#CFC49C;         /* hairlines */
-  --bone:#3D4059;         /* primary text — deepened blue slate */
-  --grey:#5C6079;         /* secondary text — blue slate */
-  --amber:#54807A;        /* accent — deepened muted teal (links, to-dos) */
-  --cyan:#5F7390;         /* utility labels — deepened slate grey */
-  --red:#54807A;          /* availability dot — teal */          /* record red — availability dot only */
+  --ink:#E8DDB5;
+  --ink-2:#EFE7C9;
+  --line:#CFC49C;
+  --bone:#3D4059;
+  --grey:#5C6079;
+  --amber:#54807A;
+  --cyan:#5F7390;
+  --red:#54807A;       /* amber-red dot */
   --disp:"Big Shoulders Display", Impact, sans-serif;
   --body:"Archivo", "Helvetica Neue", Arial, sans-serif;
   --mono:"IBM Plex Mono", "Courier New", monospace;
@@ -29,6 +29,10 @@ html{scroll-behavior:smooth}
   *,*::before,*::after{animation:none!important;transition:none!important}
 }
 body{background:var(--ink);color:var(--bone);font-family:var(--body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+
+
+  to{background-position:-80% center}
+}
 a{color:inherit;text-decoration:none}
 a:focus-visible,button:focus-visible{outline:2px solid var(--amber);outline-offset:3px}
 img{max-width:100%;display:block}
@@ -41,7 +45,7 @@ img{max-width:100%;display:block}
 .section-head h2{font-family:var(--disp);font-weight:600;font-size:clamp(2rem,4vw,3rem);letter-spacing:.02em;text-transform:uppercase}
 
 /* ---------- blueprint banner ---------- */
-.blueprint-note{background:#666A86;color:#E8DDB5;padding:10px 32px;font-family:var(--mono);font-size:.74rem;letter-spacing:.06em;text-align:center}
+.blueprint-note{background:#4A5A80;color:#EEF4FF;padding:10px 32px;font-family:var(--mono);font-size:.74rem;letter-spacing:.06em;text-align:center}
 .blueprint-note strong{font-weight:600}
 
 /* ---------- to-do chips & slates ---------- */
@@ -50,7 +54,7 @@ img{max-width:100%;display:block}
 .slate{position:relative;background:repeating-linear-gradient(-45deg,var(--ink-2),var(--ink-2) 14px,#E3D8AE 14px,#E3D8AE 28px);border:1px solid var(--line);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;text-align:center;padding:24px;color:var(--grey)}
 .slate .mono{color:var(--grey)}
 .slate .slate-title{color:var(--bone);font-family:var(--mono);font-size:.8rem;letter-spacing:.14em}
-.slate::after{content:"";position:absolute;inset:10px;border:1px dashed #C2B68C;pointer-events:none}
+.slate::after{content:"";position:absolute;inset:10px;border:1px dashed #C6BA90;pointer-events:none}
 
 /* ---------- header ---------- */
 header{position:sticky;top:0;z-index:50;background:rgba(232,221,181,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
@@ -62,11 +66,11 @@ header{position:sticky;top:0;z-index:50;background:rgba(232,221,181,.92);backdro
 
 /* ---------- hero (endboard) ---------- */
 .hero{position:relative;max-width:1180px;margin:48px auto 0;padding:0 32px}
-.endboard{position:relative;border:1px solid var(--line);background:linear-gradient(160deg,#DDD9B9 0%,var(--ink) 70%);padding:clamp(48px,8vw,110px) clamp(28px,6vw,90px);overflow:hidden}
+.endboard{position:relative;border:1px solid var(--line)-webkit-background:linear-gradient(160deg,#DDD9B9 0%,var(--ink) 70%) 70%) 60%);padding:clamp(48px,8vw,110px) clamp(28px,6vw,90px);overflow:hidden}
 .safe{position:absolute;border:1px dashed #C6BA90;pointer-events:none}
 .safe.action{inset:18px}
 .safe.title{inset:46px}
-.safe-tag{position:absolute;font-family:var(--mono);font-size:.6rem;letter-spacing:.14em;color:#9A8F68;background:var(--ink);padding:0 6px}
+.safe-tag{position:absolute;font-family:var(--mono);font-size:.6rem;letter-spacing:.14em;color:#7890B0;background:var(--ink);padding:0 6px}
 .safe-tag.a{top:11px;left:34px}
 .safe-tag.t{top:39px;left:62px}
 .tc{position:absolute;top:18px;right:26px;font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;color:var(--cyan)}
@@ -75,13 +79,8 @@ header{position:sticky;top:0;z-index:50;background:rgba(232,221,181,.92);backdro
 .hero h1 .thin{color:var(--grey);font-weight:500}
 .hero p.lede{max-width:560px;color:var(--grey);margin-top:26px;font-size:1.05rem}
 .tunein{display:inline-flex;align-items:center;gap:14px;margin-top:36px;border:1px solid var(--line);background:var(--ink-2);padding:12px 18px;font-family:var(--mono);font-size:.74rem;letter-spacing:.14em;text-transform:uppercase}
-.tunein .dot{width:9px;height:9px;border-radius:50%;background:var(--red);box-shadow:0 0 8px var(--red)}
-.tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+.tunein .dot{width:9px;height:9px;border-radius:50%;background:var(--red);flex-wrap:wrap;gap:10px;margin-top:30px}
 .tags span{font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;border:1px solid var(--line);color:var(--grey);padding:5px 10px}
-
-/* ---------- ticker ---------- */
-.ticker{border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;margin-top:64px;background:var(--ink-2)}
-.ticker-track{display:flex;width:max-content;animation:scroll 28s linear infinite;padding:14px 0}
 .ticker span{font-family:var(--mono);font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;color:var(--grey);padding:0 34px;white-space:nowrap}
 .ticker span::after{content:"✶";color:var(--amber);margin-left:34px}
 @keyframes scroll{to{transform:translateX(-50%)}}
@@ -111,8 +110,6 @@ header{position:sticky;top:0;z-index:50;background:rgba(232,221,181,.92);backdro
 .filters button.active{background:var(--bone);color:var(--ink);border-color:var(--bone)}
 .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
 .card{border:1px solid var(--line);background:var(--ink-2);display:flex;flex-direction:column;transition:border-color .2s}
-.card:hover{border-color:var(--grey)}
-.card > a{display:flex;flex-direction:column;flex:1}
 .card .thumb{aspect-ratio:16/10}
 .card .body{padding:18px 20px 22px}
 .card .body .mono{color:var(--cyan);display:block;margin-bottom:8px}
@@ -145,9 +142,6 @@ header{position:sticky;top:0;z-index:50;background:rgba(232,221,181,.92);backdro
 .contact h2 em{font-style:normal;color:var(--amber)}
 .contact-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0;border:1px solid var(--line);margin-top:48px}
 .contact-cell{padding:24px 26px;border-bottom:1px solid var(--line)}
-.contact-cell:nth-child(odd){border-right:1px solid var(--line)}
-.contact-cell:nth-last-child(-n+2){border-bottom:0}
-.contact-cell .mono{color:var(--cyan);display:block;margin-bottom:8px}
 .contact-cell a:hover{color:var(--amber)}
 
 /* ---------- footer ---------- */
@@ -169,7 +163,7 @@ footer .inner{max-width:1180px;margin:0 auto;display:flex;justify-content:space-
   .xp-row{grid-template-columns:1fr;gap:4px}
   .xp-row .yrs{text-align:left}
   .contact-grid{grid-template-columns:1fr}
-  .contact-cell:nth-child(odd){border-right:0}
+  .contact-cell:nth-child(odd){border-right:1px solid var(--line)}
   .contact-cell:nth-last-child(-n+2){border-bottom:1px solid var(--line)}
   .contact-cell:last-child{border-bottom:0}
 }
@@ -187,7 +181,7 @@ footer .inner{max-width:1180px;margin:0 auto;display:flex;justify-content:space-
       <a href="#work">Work</a>
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
-      <a href="#" title="PLACEHOLDER — link updated CV PDF">Resume ↗</a>
+      <a href="Alex-Kielesinska-CV.pdf">Resume ↗</a>
     </nav>
   </div>
 </header>
@@ -208,7 +202,6 @@ footer .inner{max-width:1180px;margin:0 auto;display:flex;justify-content:space-
       <span>Promo Packaging</span><span>Toolkit Systems</span><span>Motion Design</span><span>Localisation</span><span>Broadcast GFX</span><span>XR / AR</span>
     </div>
   </div>
-    <!-- NOTE: Hero is rewritten to lead with the editor/packaging side for the Sky role. If you'd rather keep "Creative & motion designer" for general traffic, swap the H1 — but keep "broadcast" and "toolkit" somewhere above the fold. -->
 </section>
 
 <!-- ============ CLIENT TICKER ============ -->
@@ -232,7 +225,6 @@ footer .inner{max-width:1180px;margin:0 auto;display:flex;justify-content:space-
       title="Alex Kielesinska Showreel"></iframe>
   </div>
   <script src="https://player.vimeo.com/api/player.js"></script>
-    <!-- NOTE: Cut a new broadcast-led reel: open on your strongest WBD promo/toolkit work, then Disney, FT; XR only as a closing beat. The 2023 reel predates your WBD role — retire it from the top slot (you can keep it on a sub-page as an archive). -->
 </section>
 
 <!-- ============ FEATURED CASE STUDIES ============ -->
@@ -249,9 +241,9 @@ footer .inner{max-width:1180px;margin:0 auto;display:flex;justify-content:space-
     <p class="mono meta">GFX recreation · Essential Properties · Automation-ready · No source files supplied</p>
     <p>The entire show graphics package — 2D, 3D, logo artwork — rebuilt from scratch using only the English broadcast masters as reference, then structured as an <strong>automation-ready Essential Properties toolkit</strong> so that localising each new episode became a versioning job, not a rebuild.</p>
     <div class="fl-grid">
-      <div class="slate"><span class="slate-title">AWAITING MEDIA · REBUILD COMPARISON</span><span class="mono">FR vs EN side-by-side — from your screenshots</span></div>
-      <div class="slate"><span class="slate-title">AWAITING MEDIA · TOOLKIT UI</span><span class="mono">EGP panel screenshot</span></div>
-      <div class="slate"><span class="slate-title">AWAITING MEDIA · LOGO REBUILD</span><span class="mono">Illustrator vector rebuild</span></div>
+      <img src="img/hvh-compare-logo-orange.jpg" alt="Human vs Hamster logo EN original alongside rebuilt French version" style="width:100%;aspect-ratio:16/9;object-fit:cover;border:1px solid var(--line)">
+      <img src="img/egp-colour-controls.png" alt="Essential Graphics panel showing the toolkit controls" style="width:100%;aspect-ratio:16/9;object-fit:cover;border:1px solid var(--line)">
+      <img src="img/logo-rebuild-ai.png" alt="Humain vs Hamster logo rebuilt as editable vector in Illustrator" style="width:100%;aspect-ratio:16/9;object-fit:cover;object-position:center;border:1px solid var(--line)">
     </div>
     <p style="margin-top:26px">
       <a class="case-link" href="case-human-vs-hamster.html">View full case study ↗</a>
@@ -265,9 +257,9 @@ footer .inner{max-width:1180px;margin:0 auto;display:flex;justify-content:space-
     <p class="mono meta">GFX localisation · Package audit &amp; rebuild · Illustrated graphics · 3D packaging · Font matching</p>
     <p>One of the most graphics-dense shows I've worked on — illustrated labels, animated 3D packaging, hand-lettered signs, info cards, stat graphics and character personalities, all rebuilt from a partial and inconsistently structured package. <strong>Font matching and text expansion</strong> challenges throughout.</p>
     <div class="fl-grid">
-      <div class="slate"><span class="slate-title">AWAITING MEDIA · TITLE COMPARISON</span><span class="mono">WHAT AM I EATING? vs LES SECRETS DE MON ASSIETTE</span></div>
-      <div class="slate"><span class="slate-title">AWAITING MEDIA · GRAPHICS VARIETY</span><span class="mono">Grid of different graphic styles</span></div>
-      <div class="slate"><span class="slate-title">AWAITING MEDIA · TEXT EXPANSION</span><span class="mono">Nostalgia card before/after</span></div>
+      <img src="img/waie/waie-title.png" alt="What Am I Eating title alongside French Les Secrets de Mon Assiette rebuild" style="width:100%;aspect-ratio:16/9;object-fit:cover;border:1px solid var(--line)">
+      <img src="img/waie/waie-greens.png" alt="Produce section with multiple illustrated labels rebuilt" style="width:100%;aspect-ratio:16/9;object-fit:cover;border:1px solid var(--line)">
+      <img src="img/waie/waie-nostalgia-card.png" alt="Nostalgia info card showing text expansion from English to French" style="width:100%;aspect-ratio:16/9;object-fit:cover;border:1px solid var(--line)">
     </div>
     <p style="margin-top:26px"><a class="case-link" href="case-what-am-i-eating.html">View full case study ↗</a></p>
   </div>
@@ -292,55 +284,55 @@ footer .inner{max-width:1180px;margin:0 auto;display:flex;justify-content:space-
 
     <article class="card" data-cat="broadcast">
       <a href="case-human-vs-hamster.html">
-      <div class="slate thumb"><span class="slate-title">SEE FEATURED CASE ABOVE</span><span class="mono">Human vs Hamster · GFX rebuild overview</span></div>
+      <img src="img/hvh-compare-logo-presenters.jpg" alt="Human vs Hamster logo with presenters EN alongside French rebuild" style="width:100%;aspect-ratio:16/10;object-fit:cover;border-bottom:1px solid var(--line)">
       <div class="body">
         <span class="mono">WBD · Rebuild overview</span>
-        <h3>Human vs Hamster — Overview</h3>
-        <p>The rebuild story and frame-for-frame comparison. See the toolkit system for the technical deep-dive.</p>
+        <h3>Human vs Hamster</h3>
+        <p>Full graphics package rebuilt from broadcast reference alone - 2D, 3D and logo artwork - structured as an automation-ready localisation toolkit.</p>
       </div>
       </a>
     </article>
 
     <article class="card" data-cat="campaign">
       <a href="case-little-mermaid.html">
-      <div class="slate thumb"><span class="slate-title">EXISTING ASSET</span><span class="mono">Port from current site</span></div>
+      <div class="slate thumb"><span class="slate-title">ADD IMAGE</span><span class="mono">Save image to img/ folder — see README</span></div>
       <div class="body">
         <span class="mono">Disney · EMEA Campaign · 2023</span>
         <h3>The Little Mermaid</h3>
-        <p>[KEEP — your existing case study. Add one line on deliverable scale across EMEA markets to tie it to versioning.]</p>
+        <p>EMEA marketing campaign for Disney's theatrical release - animated end-cards, Fire TV banners and localised Disney+ assets across 15+ markets.</p>
       </div>
       </a>
     </article>
 
     <article class="card" data-cat="campaign">
       <a href="case-disney-wish.html">
-      <div class="slate thumb"><span class="slate-title">EXISTING ASSET</span><span class="mono">Port from current site</span></div>
+      <div class="slate thumb"><span class="slate-title">ADD IMAGE</span><span class="mono">Save image to img/ folder — see README</span></div>
       <div class="body">
         <span class="mono">Disney · Holiday Campaign · 2023</span>
         <h3>Disney Wish</h3>
-        <p>[KEEP — existing case study. Sequence after the broadcast work; it reads "family entertainment" rather than "prestige drama".]</p>
+        <p>EMEA holiday campaign across Amazon, Freevee, Fire TV and Google tablet platforms - motion capture animation, Fire Tablet background and product carousels.</p>
       </div>
       </a>
     </article>
 
     <article class="card" data-cat="campaign">
       <a href="case-ft-live.html">
-      <div class="slate thumb"><span class="slate-title">EXISTING ASSET</span><span class="mono">Port from current site</span></div>
+      <div class="slate thumb"><span class="slate-title">ADD IMAGE</span><span class="mono">Save image to img/ folder — see README</span></div>
       <div class="body">
         <span class="mono">Financial Times · Event Design</span>
-        <h3>FT Live &amp; LED Stage</h3>
-        <p>[KEEP — merge FT Live, LED Stage and TNW into one strong event-design entry rather than three thin ones.]</p>
+        <h3>FT Live &amp; Events</h3>
+        <p>LED stage installations, event design, motion graphics, print and AR prototyping for Financial Times Live and TNW Conference 2024.</p>
       </div>
       </a>
     </article>
 
     <article class="card" data-cat="xr">
       <a href="case-xr-lab.html">
-      <div class="slate thumb"><span class="slate-title">EXISTING ASSET</span><span class="mono">Port from current site</span></div>
+      <div class="slate thumb"><span class="slate-title">ADD IMAGE</span><span class="mono">Save image to img/ folder — see README</span></div>
       <div class="body">
         <span class="mono">XR / AR · Selected Prototypes</span>
         <h3>XR Lab</h3>
-        <p>[KEEP, CONDENSED — group AR Art, Animal Portal, FTWeekend AR and AR Exhibition into one "XR Lab" entry. It differentiates you without diluting the broadcast story.]</p>
+        <p>AR and XR prototypes developed independently and during the MA in Virtual and Augmented Reality at Goldsmiths - Unity, Lens Studio, Maya and Gravity Sketch.</p>
       </div>
       </a>
     </article>
@@ -359,7 +351,7 @@ footer .inner{max-width:1180px;margin:0 auto;display:flex;justify-content:space-
       <p class="lead"><strong>Broadcast GFX editor and motion designer based in London</strong>, with 5+ years delivering promo packaging and campaigns for Warner Bros. Discovery, The Walt Disney Company and the Financial Times.</p>
       <p>Day to day I work on HBO Max promo packaging at WBD — designing GFX, building After Effects toolkits with Essential Properties, and versioning campaigns across languages and formats. I care as much about the system behind a package as the frame the viewer sees.</p>
       <p>MA in Virtual &amp; Augmented Reality at Goldsmiths. Beyond broadcast, I prototype AR experiences, live-event lenses and interactive installations — and bring that real-time thinking back into promo work.</p>
-      <p>[PLACEHOLDER — optional final line: one sentence of personality. Your current "ambitious projects at the edge of technology and art" works; keep your own voice here.]</p>
+      <p>Always open to ambitious projects at the edge of technology and craft.</p>
     </div>
     <div>
       <div class="skill-block">
@@ -367,9 +359,17 @@ footer .inner{max-width:1180px;margin:0 auto;display:flex;justify-content:space-
         <ul>
           <li><strong>After Effects</strong> — toolkits, Essential Properties, Mogrt</li>
           <li><strong>Premiere Pro</strong> — promo editing &amp; finishing</li>
-          <li><strong>Cinema 4D</strong> — [PLACEHOLDER — confirm/adjust 3D tools]</li>
-          <li><strong>Photoshop / Illustrator</strong> — key art adaptation</li>
-          <li><strong>Lens Studio / Unity</strong> — XR prototyping</li>
+          <li><strong>Cinema 4D · Maya</strong> — 3D modelling &amp; animation</li>
+          <li><strong>Photoshop · Illustrator</strong> — key art adaptation &amp; rebuild</li>
+          <li><strong>Unity</strong> — game engine &amp; XR development</li>
+          <li><strong>Lens Studio</strong> — AR lens development</li>
+        </ul>
+      </div>
+      <div class="skill-block">
+        <h4>Code &amp; scripting</h4>
+        <ul>
+          <li><strong>ExtendScript · JavaScript</strong> — AE automation, Lens Studio</li>
+          <li><strong>C#</strong> — Unity development</li>
         </ul>
       </div>
       <div class="skill-block">
@@ -379,7 +379,6 @@ footer .inner{max-width:1180px;margin:0 auto;display:flex;justify-content:space-
           <li><strong>Roto Brush &amp; Content-Aware Fill</strong> — cleanup and mattes</li>
           <li><strong>Topaz Video AI</strong> — upscaling archive &amp; low-res source</li>
         </ul>
-    <!-- NOTE: Only keep the AI tools you genuinely use — interviews check. Frame stays "AI-assisted workflow", never "AI artist". -->
       </div>
     </div>
   </div>
@@ -408,13 +407,12 @@ footer .inner{max-width:1180px;margin:0 auto;display:flex;justify-content:space-
     <div class="contact-cell"><span class="mono">LinkedIn</span><a href="https://linkedin.com/in/axkielesinska" target="_blank" rel="noopener">axkielesinska ↗</a></div>
     <div class="contact-cell"><span class="mono">Location</span><span>London, UK · Open to projects</span></div>
   </div>
-    <!-- NOTE: Optional: swap the headline back to "Let's work together" if "air-ready" feels too cute — your call, your voice. -->
 </section>
 
 <!-- ============ FOOTER ============ -->
 <footer>
   <div class="bars" aria-hidden="true">
-    <div style="background:#666A86"></div><div style="background:#788AA3"></div><div style="background:#92B6B1"></div><div style="background:#B2C9AB"></div><div style="background:#E8DDB5;border-top:1px solid #CFC49C"></div>
+    <div style="background:#1e3a8a"></div><div style="background:#2563eb"></div><div style="background:#6b6460"></div><div style="background:#ddd8ce"></div><div style="background:var(--ink)"></div>
   </div>
   <div class="inner">
     <span>© Alex Kielesinska 2026</span>
