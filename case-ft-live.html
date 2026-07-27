@@ -42,12 +42,88 @@
 
   <section>
     <h2>Future of the Car</h2>
-    <p>FT Live's car and mobility-focused conference, presented in person Christian Horner and the F1 CEO. Full creative branding and on-site production across video and physical space, including <strong>event videos and on-site animations, LED scene backdrop screens up to 9m wide, printed backdrop and standing banners, an A4 brochure programme, social media videos, and print ads for the Financial Times</strong> - one branding system built to hold from a phone screen to a 9m LED wall.</p>
-    <figure>
-      <img src="img/ft/future-of-the-car-1.jpg" alt="Future of the Car event branding and LED backdrop">
-      <figcaption>Future of the Car - LED backdrop, on-site branding and print collateral.</figcaption>
+    <p>FT Live's car and mobility-focused conference, whose speakers included Christian Horner, the F1 CEO and the F1 CFO. Full creative branding and on-site production across video and physical space, including <strong>event videos and on-site animations, LED scene backdrop screens up to 9m wide, printed backdrop and standing banners, an A4 brochure programme, social media videos, and print ads for the Financial Times</strong> - one branding system built to hold from a phone screen to a 9m LED wall.</p>
+
+    <figure class="fotc-carousel" aria-roledescription="carousel" aria-label="Future of the Car photos">
+      <div class="fotc-track-wrap">
+        <div class="fotc-track" id="fotcTrack">
+          <div class="fotc-slide"><img src="img/ft/future-of-the-car-1.jpg" alt="1"></div>
+          <div class="fotc-slide"><img src="img/ft/future-of-the-car-2.jpg" alt="2"></div>
+          <div class="fotc-slide"><img src="img/ft/future-of-the-car-3.jpg" alt="3"></div>
+          <div class="fotc-slide"><img src="img/ft/future-of-the-car-4.jpg" alt="4"></div>
+          <div class="fotc-slide"><img src="img/ft/future-of-the-car-5.jpg" alt="5"></div>
+          <div class="fotc-slide"><img src="img/ft/future-of-the-car-6.jpg" alt="6"></div>
+        </div>
+        <button class="fotc-arrow prev" id="fotcPrev" aria-label="Previous photo">&larr;</button>
+        <button class="fotc-arrow next" id="fotcNext" aria-label="Next photo">&rarr;</button>
+      </div>
+      <figcaption class="fotc-meta">
+        <span class="fotc-caption">Future of the Car - LED backdrop, on-site branding and print collateral.</span>
+        <span style="display:flex;align-items:center;gap:14px">
+          <span class="fotc-counter" id="fotcCounter">01 / 05</span>
+          <span class="fotc-dots" id="fotcDots"></span>
+        </span>
+      </figcaption>
     </figure>
   </section>
+
+  <style>
+    .fotc-carousel{border:1px solid var(--line);background:var(--ink-2);margin-top:24px}
+    .fotc-track-wrap{position:relative;overflow:hidden;aspect-ratio:16/9}
+    .fotc-track{display:flex;height:100%;transition:transform .45s ease}
+    @media(prefers-reduced-motion:reduce){.fotc-track{transition:none}}
+    .fotc-slide{flex:0 0 100%;height:100%}
+    .fotc-slide img{width:100%;height:100%;object-fit:cover;display:block}
+    .fotc-arrow{position:absolute;top:50%;transform:translateY(-50%);width:42px;height:42px;border:1px solid var(--line);background:rgba(232,221,181,.88);color:var(--bone);font-family:var(--mono);font-size:1rem;cursor:pointer;display:flex;align-items:center;justify-content:center}
+    .fotc-arrow:hover{background:var(--bone);color:var(--ink);border-color:var(--bone)}
+    .fotc-arrow.prev{left:14px}
+    .fotc-arrow.next{right:14px}
+    .fotc-meta{display:flex;align-items:center;justify-content:space-between;padding:14px 18px;border-top:1px solid var(--line);gap:12px;flex-wrap:wrap}
+    .fotc-caption{font-size:.88rem;color:var(--grey)}
+    .fotc-dots{display:flex;gap:8px}
+    .fotc-dots button{width:8px;height:8px;border-radius:50%;border:1px solid var(--grey);background:transparent;padding:0;cursor:pointer}
+    .fotc-dots button.active{background:var(--amber);border-color:var(--amber)}
+    .fotc-counter{font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--cyan)}
+  </style>
+
+  <script>
+  (function(){
+    var track=document.getElementById('fotcTrack');
+    if(!track)return;
+    var slides=track.children;
+    var total=slides.length;
+    var dotsWrap=document.getElementById('fotcDots');
+    var counter=document.getElementById('fotcCounter');
+    var i=0;
+
+    for(var d=0;d<total;d++){
+      var dot=document.createElement('button');
+      dot.setAttribute('aria-label','Go to photo '+(d+1));
+      if(d===0)dot.classList.add('active');
+      dot.addEventListener('click',(function(idx){return function(){go(idx)}})(d));
+      dotsWrap.appendChild(dot);
+    }
+
+    function go(idx){
+      i=(idx+total)%total;
+      track.style.transform='translateX(-'+(i*100)+'%)';
+      counter.textContent=String(i+1).padStart(2,'0')+' / '+String(total).padStart(2,'0');
+      Array.prototype.forEach.call(dotsWrap.children,function(dot,n){
+        dot.classList.toggle('active',n===i);
+      });
+    }
+
+    document.getElementById('fotcPrev').addEventListener('click',function(){go(i-1)});
+    document.getElementById('fotcNext').addEventListener('click',function(){go(i+1)});
+
+    var carousel=track.closest('.fotc-carousel');
+    carousel.setAttribute('tabindex','0');
+    carousel.addEventListener('keydown',function(e){
+      if(e.key==='ArrowLeft')go(i-1);
+      if(e.key==='ArrowRight')go(i+1);
+    });
+  })();
+  </script>
 
   <section>
     <h2>FT Live - Events &amp; Stage Design</h2>
